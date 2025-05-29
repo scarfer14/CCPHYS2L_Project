@@ -58,7 +58,7 @@ export default function DashBody() {
           <div className="folder-grid">
             <button className="folder-btn" onClick={() => openPopup('charger')}>
               <img src="/assets/icons/physics.png" alt="Folder 1" />
-              <span>Electric Charger</span>
+              <span>Electric Charge</span>
             </button>
             <button className="folder-btn" onClick={() => openPopup('fields')}> {/* insert path from the folder physics (lessons) */}
               <img src="/assets/icons/physics.png" alt="Folder 2" />

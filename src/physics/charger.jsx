@@ -6,8 +6,19 @@ export default function Charger({ onClose }) {
     <div className="popup-overlay">
       <div className="popup-content">
         <button className="popup-close" onClick={onClose}>×</button>
-        <h2>Lesson 1: Electric Charger</h2>
-        <p>Insert here the lesson about the electric charger and fix the format.</p>
+        <h2>Lesson 1: Electric Charge</h2>
+        <p>Electric charge is a fundamental property of matter that causes it to experience a force when placed in an electric or magnetic field. It is the source of electric phenomena and is carried by subatomic particles like electrons and protons.
+        </p>
+        <p>Types of Charge: There are two types — positive and negative.
+        </p>
+        <p>Protons have a positive charge.
+        </p>
+        <p>Electrons have a negative charge.
+        </p>
+        <p>Neutrons have no charge.
+        </p>
+        <p>Like charges repel, and opposite charges attract.
+        </p>
       </div>
     </div>
   );
