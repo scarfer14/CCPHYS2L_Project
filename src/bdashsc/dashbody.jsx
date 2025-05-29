@@ -3,6 +3,13 @@ import './dashbody.css';
 
 // import here the jsx from physics folder
 import Charger from '../physics/charger';
+import Fields from '../physics/fields';
+import Capacitors from '../physics/capacitors';
+import Maxwell from '../physics/maxwell';
+import Ohms from '../physics/ohms';
+import Potential from '../physics/potential';
+import Resistance from '../physics/resistance';
+
 
 export default function DashBody() {
   const [activePopup, setActivePopup] = useState(null);
@@ -53,27 +60,27 @@ export default function DashBody() {
               <img src="/assets/icons/physics.png" alt="Folder 1" />
               <span>Electric Charger</span>
             </button>
-            <button className="folder-btn" onClick={() => openPopup('')}> {/* insert path from the folder physics (lessons) */}
+            <button className="folder-btn" onClick={() => openPopup('fields')}> {/* insert path from the folder physics (lessons) */}
               <img src="/assets/icons/physics.png" alt="Folder 2" />
               <span>Electric Field</span>
             </button>
-            <button className="folder-btn" onClick={() => openPopup('')}>
+            <button className="folder-btn" onClick={() => openPopup('potential')}>
               <img src="/assets/icons/physics.png" alt="Folder 3" />
               <span>Electric Potential</span>
             </button>
-            <button className="folder-btn" onClick={() => openPopup('')}>
+            <button className="folder-btn" onClick={() => openPopup('capacitors')}>
               <img src="/assets/icons/physics.png" alt="Folder 4" />
               <span>Capacitors</span>
             </button>
-            <button className="folder-btn" onClick={() => openPopup('')}>
+            <button className="folder-btn" onClick={() => openPopup('resistance')}>
               <img src="/assets/icons/physics.png" alt="Folder 5" />
               <span>Resistivity & Resistance</span>
             </button>
-            <button className="folder-btn" onClick={() => openPopup('')}>
+            <button className="folder-btn" onClick={() => openPopup('ohms')}>
               <img src="/assets/icons/physics.png" alt="Folder 6" />
               <span>Ohm's Law</span>
             </button>
-            <button className="folder-btn" onClick={() => openPopup('')}>
+            <button className="folder-btn" onClick={() => openPopup('maxwell')}>
               <img src="/assets/icons/physics.png" alt="Folder 7" />
               <span>Maxwell's Equations</span>
             </button>
@@ -86,7 +93,12 @@ export default function DashBody() {
         </div>
 
         {activePopup === 'charger' && <Charger onClose={closePopup} />}
-        {/* Add more popup components as needed */}
+        {activePopup === 'fields' && <Fields onClose={closePopup} />}
+        {activePopup === 'capacitors' && <Capacitors onClose={closePopup} />}
+        {activePopup === 'maxwell' && <Maxwell onClose={closePopup} />}
+        {activePopup === 'ohms' && <Ohms onClose={closePopup} />}
+        {activePopup === 'potential' && <Potential onClose={closePopup} />}
+        {activePopup === 'resistance' && <Resistance onClose={closePopup} />}
       </div>
     </div>
   );
