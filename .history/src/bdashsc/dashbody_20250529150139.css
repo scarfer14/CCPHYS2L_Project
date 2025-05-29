@@ -1,0 +1,6 @@
+.calculator {
+  grid-column: 2; /* below father */
+  grid-row: 3;    /* new row below father and right-stack */
+  width: 100%;
+  min-height: 150px;
+}

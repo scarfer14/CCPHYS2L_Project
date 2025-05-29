@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background: #2e342b;
+  font-family: 'Courier New', monospace;
+}
+
+.screen {
+  width: 315px;
+  height: 290px;
+  background-color: #1e1e1e;
+  border: 8px solid #111;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px limegreen;
+}
+
+.content {
+  text-align: center;
+  color: #aaffaa;
+  font-size: 14px;
+}
+
+.welcome {
+  letter-spacing: 2px;
+  color: #99ff99;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #99ff99;
+  line-height: 1;
+  text-shadow: 2px 2px #333;
+  margin: 10px 0;
+}
+
+.unlock {
+  font-size: 12px;
+  margin-top: 20px;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
+}

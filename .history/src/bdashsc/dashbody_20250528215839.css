@@ -1,0 +1,30 @@
+.tab {
+  background-color: #fdeec7;
+  border: 2px solid #111;
+  color: #000000;
+  font-family: monospace;
+  padding: 0;
+  flex: 1 1 28%;
+  min-width: 250px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-header {
+  background-color: #333;
+  color: #aaffaa;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-bottom: 1px solid #000;
+  font-family: 'Press Start 2P', monospace;
+  text-align: left;
+}
+
+.tab > *:not(.tab-header) {
+  flex: 1;
+  padding: 8px;
+  overflow: auto;
+}

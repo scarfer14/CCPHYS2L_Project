@@ -1,0 +1,79 @@
+/* Import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  background: #2e342b;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Fullscreen CRT screen */
+.screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e1e1e;
+  border: 8px solid #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 25px limegreen,
+    inset 0 0 90px rgba(0, 0, 0, 0.8);
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Animated grain effect overlay */
+.screen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAArElEQVRoge3ZsQ2AIBAF0VmXf3Ag5gf0YiM6VX0ZK7dnA3WNgOke3OkYc9LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsbN/NBt+O0A+OqRvu4AAAAASUVORK5CYII=") repeat;
+  opacity: 0.15;
+  animation: staticNoise 0.2s steps(2) infinite;
+  z-index: 10;
+}
+
+@keyframes staticNoise {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-5%, -5%); }
+}
+
+/* Text styling */
+.welcome {
+  color: #99ff99;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.title {
+  color: #99ff99;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Retro button */
+.unlock-btn {
+  font-size: 8px;
+  background-color: transparent;
+  color: #aaffaa;
+  border: 1px solid #aaffaa;
+  padding: 6px 12px;
+  cursor: pointer;
+  animation: blink 1s infinite alternate;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.unlock-btn:hover {
+  background-color: #333;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.4; }
+}
