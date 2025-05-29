@@ -7,15 +7,14 @@ export default function Folder1({ onClose }) {
       <div className="popup-content">
         <button className="popup-close" onClick={onClose}>×</button>
         <h2>Physics Folder Topics</h2>
-        <p>The following are the list of lessons about Physics:
-          1. Electric Charger
-          2. Electric Field
-          3. Electric Potential
-          4. Capacitors
-          5. Resistivity & Resistance
-          6. Ohm's Law
-          7. Maxwell's Equations
-        </p>
+        <p>The following are the list of lessons about Physics: </p>
+        <p>  1. Electric Charger </p>
+        <p>  2. Electric Field </p>
+        <p>  3. Electric Potential </p>
+        <p>  4. Capacitors </p>
+        <p>  5. Resistivity & Resistance </p>
+        <p>  6. Ohm's Law </p>
+        <p>  7. Maxwell's Equations </p>
       </div>
     </div>
   );
