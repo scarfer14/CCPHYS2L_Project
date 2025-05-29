@@ -1,0 +1,64 @@
+/* Import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  background: #2e342b;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Fullscreen CRT screen */
+.screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2e342b;
+  padding: 40px; /* simulates the border spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 60px 20px rgba(0, 0, 0, 0.6),         /* outer soft black glow */
+    inset 0 0 200px rgba(0, 0, 0, 0.9),       /* deep vignette */
+    inset 0 0 80px rgba(0, 0, 0, 0.7);        /* soft black inner edge */
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 12px; /* Optional CRT curve */
+}
+
+/* Text styling */
+.welcome {
+  color: #99ff99;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.title {
+  color: #99ff99;
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Retro button */
+.unlock-btn {
+  font-size: 8px;
+  background-color: transparent;
+  color: #aaffaa;
+  border: 1px solid #aaffaa;
+  padding: 6px 12px;
+  cursor: pointer;
+  animation: blink 1s infinite alternate;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.unlock-btn:hover {
+  background-color: #333;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.4; }
+}

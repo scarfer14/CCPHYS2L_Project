@@ -1,0 +1,95 @@
+.dashboard-content {
+  display: grid;
+  grid-template-areas:
+    "fun-facts multimedia"
+    "physics-folder father"
+    "physics-folder problem"
+    "true-false calculator";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 12px;
+  padding: 20px;
+  background-color: #2e2e2e;
+}
+
+.tab {
+  background-color: #fdeec7;
+  border: 2px solid #111;
+  color: #000;
+  font-family: monospace;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-header, .tab-header1 {
+  padding: 6px 10px;
+  font-size: 13px;
+  text-align: left;
+  background-color: #f4a1c8;
+  color: black;
+}
+
+.tab-header1 {
+  background-color: #a285b9;
+}
+
+.tab > *:not(.tab-header):not(.tab-header1) {
+  padding: 8px;
+}
+
+.multimedia iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.folders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.folders img {
+  width: 48px;
+  height: auto;
+}
+
+.fun-fact {
+  grid-area: fun-facts;
+}
+
+.multimedia {
+  grid-area: multimedia;
+}
+
+.folders {
+  grid-area: physics-folder;
+}
+
+.image {
+  grid-area: father;
+}
+
+.physics-problem {
+  grid-area: problem;
+}
+
+.fun-fact-2 {
+  grid-area: true-false;
+}
+
+.calculator {
+  grid-area: calculator;
+}

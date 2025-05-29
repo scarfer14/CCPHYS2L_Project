@@ -1,0 +1,19 @@
+import React from 'react';
+import './dashnavbar.css';
+
+const icons = [
+  'folder', 'book', 'trash', 'email', 'calc', 'cat', 'user',
+  'lock', 'folder2', 'check', 'cross', 'fire', 'info', 'star'
+];
+
+export default function DashNavbar() {
+  return (
+    <div className="dash-navbar">
+      {icons.map((icon, index) => (
+        <button key={index} className="icon-button" title={icon}>
+          <img src={`/assets/icons/${icon}.png`} alt={icon} />
+        </button>
+      ))}
+    </div>
+  );
+}
