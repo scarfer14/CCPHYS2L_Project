@@ -60,3 +60,23 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+
+.calculator-wrapper {
+  width: 37.5em;           
+  margin: 1.25em auto;   
+  padding: 1em;           
+  background-color: white;
+  border-radius: 0.75em;    
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15); 
+}
+
+.calc-close-btn {
+  position: absolute;
+  top: 0.01em;
+  right: 0.4em;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

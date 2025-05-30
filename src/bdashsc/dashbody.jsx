@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DesmosCalc from '../components/DesmosCalc';  //import for calc api
 import './dashbody.css';
 
 // import here the jsx from physics folder
@@ -89,8 +90,9 @@ export default function DashBody() {
 
         <div className="tab calculator">
           <div className="tab-header">Calculator</div>
-          <p>[ Calculator UI here later ]</p>
+          <DesmosCalc />
         </div>
+
 
         {activePopup === 'charger' && <Charger onClose={closePopup} />}
         {activePopup === 'fields' && <Fields onClose={closePopup} />}

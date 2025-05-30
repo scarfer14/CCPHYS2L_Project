@@ -5,6 +5,7 @@ import Folder1 from '../lessons/folder1';
 import Book from '../lessons/book'; 
 import Email from '../lessons/email'; 
 import Telescope from '../lessons/telescope'; 
+import DesmosCalc from '../components/desmoscalc';
 
 
 const icons = [
@@ -18,6 +19,7 @@ export default function DashNavbar() {
   const [showFolder1, setShowFolder1] = useState(false);
   const [showBook, setShowBook] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
+  const [showCalculator, setShowCalculator] = useState(false);
   const [showTelescope, setShowTelescope] = useState(false);
 
   const handleIconClick = (icon) => {
@@ -29,6 +31,9 @@ export default function DashNavbar() {
     }
     if (icon === 'email') {
       setShowEmail(true);
+    }
+    if (icon == 'calc'){
+      setShowCalculator(true);
     }
     if (icon === 'cat') {
       setShowTelescope(true);
@@ -57,6 +62,10 @@ export default function DashNavbar() {
     setShowEmail(false);
   };
 
+  const handleCloseCalculator = () => {
+    setShowCalculator(false);
+  }
+
   const handleCloseTelescope = () => {
     setShowTelescope(false);
   };
@@ -80,6 +89,15 @@ export default function DashNavbar() {
       {showFolder1 && <Folder1 onClose={handleCloseFolder1} />}
       {showBook && <Book onClose={handleCloseBook} />}
       {showEmail && <Email onClose={handleCloseEmail} />}
+      {showCalculator && (
+        <div className="popup-overlay" onClick={handleCloseCalculator}>
+          <div className="popup-content" onClick={e => e.stopPropagation()}>
+            <button className="calc-close-btn" onClick={handleCloseCalculator}> × </button>
+            <DesmosCalc />
+          </div>
+        </div>
+      )}
+
       {showTelescope && <Telescope onClose={handleCloseTelescope} />}
     </>
   );
