@@ -9,6 +9,7 @@ export default function Charger({ onClose }) {
         <h2>Lesson 1: Electric Charge</h2>
         <p>Electric charge is a fundamental property of matter that causes it to experience a force when placed in an electric or magnetic field. It is the source of electric phenomena and is carried by subatomic particles like electrons and protons.
         </p>
+        <p>-----------------------------------------------------</p>
         <p>Types of Charge: There are two types — positive and negative.
         </p>
         <p>Protons have a positive charge.
@@ -17,6 +18,7 @@ export default function Charger({ onClose }) {
         </p>
         <p>Neutrons have no charge.
         </p>
+        <p>-----------------------------------------------------</p>
         <p>Like charges repel, and opposite charges attract.
         </p>
       </div>
