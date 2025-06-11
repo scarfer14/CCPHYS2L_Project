@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  background: #2e342b;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2e342b;
+  padding: 40px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 60px 20px rgba(0, 0, 0, 0.6),         
+    inset 0 0 200px rgba(0, 0, 0, 0.9),      
+    inset 0 0 80px rgba(0, 0, 0, 0.7);    
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.welcome {
+  color: #99ff99;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.title {
+  color: #99ff99;
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.unlock-btn {
+  font-size: 15px;
+  background-color: transparent;
+  color: #aaffaa;
+  border: 1px solid #aaffaa;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-top: 100px;
+  animation: blink 1s infinite alternate;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.unlock-btn:hover {
+  background-color: #333;
+}
+
+@keyframes blink {
+  from { opacity: 5; }
+  to { opacity: 0.4; }
+}
+
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.starfield::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    10vw 20vh white,
+    30vw 80vh white,
+    50vw 50vh white,
+    70vw 20vh white,
+    90vw 90vh white,
+    20vw 60vh white,
+    40vw 30vh white,
+    60vw 70vh white,
+    80vw 10vh white,
+    15vw 85vh white,
+    25vw 15vh white,
+    85vw 25vh white;
+  animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+/* Ensure text is above stars */
+.welcome, .title, .unlock-btn {
+  z-index: 2;
+  position: relative;
+}
+

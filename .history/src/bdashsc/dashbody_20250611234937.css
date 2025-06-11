@@ -1,0 +1,149 @@
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  padding: 5px;
+  background-color: #2e342b;
+  grid-template-areas:
+    "fun-facts physics-folder"
+    "multimedia physics-folder"
+    "bottom-left calculator";
+}
+
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #2e342b;
+}
+
+.dashboard-content {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.tab {
+  background-color: #fdeec7;
+  border: 2px solid #111;
+  color: #000000;
+  font-family: monospace;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tab-header,
+.tab-header1 {
+  padding: 6px 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.tab-header {
+  background-color: #f4a1c8;
+}
+
+.tab-header1 {
+  background-color: #a285b9;
+}
+
+.fun-facts      { grid-area: fun-facts; height: 150px; width: 550px}
+.multimedia     { grid-area: multimedia; height: 400px; width: 550px}
+.physics-folder { grid-area: physics-folder; height: 560px; width: 350px;}
+.calculator     { grid-area: calculator; height: 250px; width: 350px;}
+.bottom-left    { 
+  grid-area: bottom-left;
+  display: flex;
+  gap: 10px;
+}
+
+.problem {
+  flex: 1;
+  height: 250px;
+  width: 2px;
+}
+
+.father {
+  flex: 1;
+  height: 250px; 
+  width: 2px;
+}
+
+.father img {
+  flex: 1;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 250px; 
+  width: 250px;
+}
+
+.physics-folder .folder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.folder-grid img {
+  width: 50px;
+  height: 50px;
+  image-rendering: pixelated;
+}
+
+.multimedia iframe {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 530px;
+  height: 500px;
+  border: none;
+}
+
+p {
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.folder-btn {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 8px;
+  padding: 1px;
+  font-family: monospace;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.folder-btn:hover {
+  background-color: #e18db6;
+}
+
+.folder-btn img {
+  width: 50px;
+  height: 50px;
+  image-rendering: pixelated;
+  margin-bottom: 5px;
+}
+
+.folder-btn span {
+  color: #000;
+  font-size: 8px;
+}
+

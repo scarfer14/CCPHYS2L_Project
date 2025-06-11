@@ -1,0 +1,47 @@
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Behind the text */
+}
+
+.starfield::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    10vw 20vh white,
+    30vw 80vh white,
+    50vw 50vh white,
+    70vw 20vh white,
+    90vw 90vh white,
+    20vw 60vh white,
+    40vw 30vh white,
+    60vw 70vh white,
+    80vw 10vh white,
+    15vw 85vh white,
+    25vw 15vh white,
+    85vw 25vh white;
+  animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+/* Ensure text is above stars */
+.welcome, .title, .unlock-btn {
+  z-index: 2;
+  position: relative;
+}
